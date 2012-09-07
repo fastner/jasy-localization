@@ -6,7 +6,7 @@ Localization and internationalization tool support for Jasy
 
 Localization tooling for JASY consists of two different language file generators.
 You can create .pot files that are translation templates used to generate
-translation files from. If you don't plan to give your trnaslation files to an
+translation files from. If you don't plan to give your translation files to an
 external translation service provider you can also use the easier po file handling.
 These files are updated if new entries occure so you don't have to diff the old
 and the new translation files.
