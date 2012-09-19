@@ -19,7 +19,7 @@
 
 import os
 import polib
-from jasy.core.Logging import *
+from jasy.core.Console import *
 
 class JasyPOFile(polib.POFile):
 	"""
