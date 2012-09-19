@@ -111,11 +111,11 @@ def appendEntries(po, translations, oldValues={}):
 
 
 @share
-def generatePOT(state):
+def generatePOT(session, config):
 	header("Generating translation template...")
 	info("Generate POT file...")
 	
-	project = state.session.getMain()
+	project = session.getMain()
 	filename = os.path.join(project.getPath(), "source", "translation", project.getName() + ".pot")
 	po = JasyPOFile()
 	appendEntries(po, getTranslations(project))
@@ -123,11 +123,11 @@ def generatePOT(state):
 
 
 @share
-def generatePO(state):
+def generatePO(session, config):
 	header("Generating translation files...")
 	
 	languages = {}
-	for permutation in state.session.getPermutations():
+	for permutation in session.getPermutations():
 		lang = permutation.get("locale")
 		languages[lang] = True
 	
