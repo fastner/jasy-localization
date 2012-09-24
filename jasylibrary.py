@@ -127,7 +127,7 @@ def generatePO(session, config):
 	header("Generating translation files...")
 	
 	languages = session.getAvailableTranslations()
-	project = state.session.getMain()
+	project = session.getMain()
 	
 	info("Generate translation files...")
 	indent()
