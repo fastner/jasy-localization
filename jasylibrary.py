@@ -126,12 +126,7 @@ def generatePOT(session, config):
 def generatePO(session, config):
 	header("Generating translation files...")
 	
-	languages = {}
-	for permutation in session.getPermutations():
-		lang = permutation.get("locale")
-		languages[lang] = True
-	
-	languages = list(languages.keys())
+	languages = session.getAvailableTranslations()
 	project = state.session.getMain()
 	
 	info("Generate translation files...")
