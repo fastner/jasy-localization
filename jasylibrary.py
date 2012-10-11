@@ -123,10 +123,12 @@ def generatePOT(session, config):
 
 
 @share
-def generatePO(session, config):
+def generatePO(session, config, newLanguages=None):
 	header("Generating translation files...")
 	
 	languages = session.getAvailableTranslations()
+	if newLanguages:
+		languages = languages | newLanguages
 	project = session.getMain()
 	
 	info("Generate translation files...")
