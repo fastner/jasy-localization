@@ -23,10 +23,10 @@ You can create POT files with the following jasy task:
 
     @task
     def translationtemplate():
-        localization.generatePOT(jasy.env.State)
+        localization.generatePOT(session, config)
         
 If you want to create the po files of the languages defined in your jasyscript file use
 
     @task
     def translation():
-        localization.generatePO(jasy.env.State)
+        localization.generatePO(session, config, {"en"})
